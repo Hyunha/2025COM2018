@@ -26,11 +26,11 @@ This class is a model class for creating a piece of a puzzle. The face value of 
 
 This class is a model class for creating a puzzle board. In the constructor function, initialize `board` with the following algorithm.
 
-- Declare an integer local variable `number`, with an initial value of 1.
-- Iterate through the board from the last row to the first row.
-    - Repeat the following from the last column to the first column of the board.
-        - Create and place a new puzzle piece with a face value of `number` in `board[row][col]`.
-        - Increase the value of `number` by 1.
+- ~~Declare an integer local variable `number`, with an initial value of 1.~~
+- ~~Iterate through the board from the last row to the first row.~~
+    - ~~Repeat the following from the last column to the first column of the board.~~
+        - ~~Create and place a new puzzle piece with a face value of `number` in `board[row][col]`.~~
+        - ~~Increase the value of `number` by 1.~~
 - When implementing the program, for convenience, the values are inserted in a predefined order as shown below.
 ```Java
     // Create size x size PuzzleBoard
