@@ -5,20 +5,27 @@
 
 - Using the `ActionListener` covered this week, draw a ball that changes size and color.
 
-Draw a ball that periodically changes size, and changes color when a button is pressed.
-When the program starts, the ball repeatedly shrinks and grows at regular intervals.
-The ball starts red, and each time the **OK** button is pressed, it should toggle between blue and red.
+Create a program that changes the ball’s size and color each time the button is pressed, as shown below.
 
 <img src="img/lab01e.png" width="750">
 
-The class diagram for the whole program is shown below.
-`ColorButton` implements `ActionListener` and reacts to the user's button-press events.
+The class diagram for the program is shown below.
 
 <img src="img/lab01_cd.png" width="750">
 
-- `ColorButton` : `actionPerformed(ActionEvent e)` - Changes the ball’s color whenever an event occurs.
-- `ThrobbingBall` : `throb()` - Toggles whether the ball is at its large size (`isLarge`).
-- `ThrobController` : `run()` -  In an infinite loop, toggles the ball’s size state, repaints the ThrobPanel (`writer.repaint()`), then sleeps for the specified time (`Thread.sleep(time)`).
+In the provided code, as shown in **AS-IS**, the ball’s color and size change simultaneously.
+Modify the code so that it behaves as in **TO-BE**, where the color and size change in sequence.
+
+<img src="img/lab01_changes.png" width="750">
+
+Implementation Guidelines
+
+Implement `ColorButton` by inheriting the `ActionListener` interface.
+- It should respond to the user's button-press events.
+- In `ColorButton`, implement the `actionPerformed(ActionEvent e)` method so that it changes the ball’s color and size whenever an event occurs.
+- In `ThrobbingBall`, the `throb()` method should toggle whether the ball is large (`isLarge`).
+- **[Important]** The `paintComponent` method in `ThrobPanel` defines how the panel is drawn.
+- **[Important]** To force a `JPanel` to redraw itself (without resizing or moving the window), use the `repaint()` method.
 
 ### Lab 2 : Slide Puzzle (GUI Version)
 
